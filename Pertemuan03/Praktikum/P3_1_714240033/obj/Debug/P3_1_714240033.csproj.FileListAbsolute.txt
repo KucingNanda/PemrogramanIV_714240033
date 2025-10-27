@@ -1,0 +1,7 @@
+C:\Users\Acer\source\repos\P3_1_714240033\P3_1_714240033\bin\Debug\P3_1_714240033.exe.config
+C:\Users\Acer\source\repos\P3_1_714240033\P3_1_714240033\bin\Debug\P3_1_714240033.exe
+C:\Users\Acer\source\repos\P3_1_714240033\P3_1_714240033\bin\Debug\P3_1_714240033.pdb
+C:\Users\Acer\source\repos\P3_1_714240033\P3_1_714240033\obj\Debug\P3_1_714240033.csproj.AssemblyReference.cache
+C:\Users\Acer\source\repos\P3_1_714240033\P3_1_714240033\obj\Debug\P3_1_714240033.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\P3_1_714240033\P3_1_714240033\obj\Debug\P3_1_714240033.exe
+C:\Users\Acer\source\repos\P3_1_714240033\P3_1_714240033\obj\Debug\P3_1_714240033.pdb
