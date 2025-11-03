@@ -1,0 +1,24 @@
+Answer_P4_1_714240033
+
+Bagian I
+No 14. Jelaskan mengapa pesan kesalahan tersebut muncul! 
+"'Product_714240033.myType' is inaccessible due to its protection level"
+Kode di dalam ProductTest_714240033 mencoba mengakses anggota protected dari kelas Product_714240033, yang tidak diizinkan oleh aturan akses C#. Inilah mengapa build gagal.
+
+No 19. Perhatikan hasil yang muncul dilayar, kenapa bisa seperti itu?
+Hasil yang muncul di layar konsol adalah kosong, karena variabel string myType yang coba dicetak memiliki nilai default null. Pada langkah 15 itu mengubah deklarasi variabel dari protected string myType = "Book" menjadi private string myType;. Saat hanya mendeklarasikan variabel string di dalam class tanpa memberinya nilai awal, C# secara otomatis mengaturnya ke null.
+
+No 24. Jelaskan mengapa yang muncul dilayar adalah kata tersebut!
+Yang muncul di layar adalah kata "DVD" karena, telah ditetapkan (set) nilai tersebut ke properti MyType sebelum dibaca (get).
+
+Bagian II
+No 8. Jelaskan mengapa tipe dan title dari buku tersebut tidak muncul! Apakah istilah dalam konsep OOP yang mendefinisikan fenomena seperti ini? 
+Tipe dan judul buku tidak muncul karena konstruktor Book_714240033 yang dipanggil gagal meneruskan nilai "Book" dan "C# Object Oriented Solution" ke konstruktor base class Product_714240033. Konstruktor Book_714240033 hanya mengatur field pageCount miliknya sendiri.
+Karena field myType dan myTitle di base class bersifat private (ini adalah Enkapsulasi), satu-satunya cara untuk mengaturnya adalah melalui konstruktor base class. Tanpa panggilan base(type, title) yang eksplisit, C# secara otomatis memanggil konstruktor Product_714240033() yang kosong , sehingga myType dan myTitle tetap null dan dicetak sebagai string kosong.
+
+No 12. Perhatikan hasil yang muncul dilayar, jelaskan mengapa saat ini tipe dan judul buku tampil pada output! 
+Memperbaiki constructor chaining (rantai konstruktor). Dengan menambahkan sintaks : base(type, title) pada deklarasi konstruktor Book_714240033 yang secara eksplisit memberi tahu C# untuk memanggil konstruktor dari base class (Product_714240033) yang menerima dua parameter string.
+Panggilan base ini meneruskan nilai "Book" dan "C# Object Oriented Solution" ke konstruktor Product_714240033, yang kemudian menginisialisasi field private myType dan myTitle.
+
+No 19. Mengapa objek product2 tidak dibuat seperti product1 atau seperti gambar yang ditandai di bawah?
+Objek product2 tidak dibuat seperti pada gambar yang ditandai karena hal itu akan menyebabkan error kompilasi (compile error). Alasan utamanya terletak pada desain konstruktor DVD_714240033 yang ditulis pada file DVD_714240033.cs. Konstruktor DVD_714240033 tersebut didefinisikan hanya untuk menerima dua parameter: string title dan string duration.
