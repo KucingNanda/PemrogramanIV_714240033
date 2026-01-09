@@ -34,6 +34,7 @@
             this.btnSimpan = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnExport = new System.Windows.Forms.Button();
             this.textBoxCariData = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -52,7 +53,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DataTransaksi = new System.Windows.Forms.DataGridView();
-            this.btnExport = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -123,6 +123,19 @@
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Form Pencarian";
+            // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.ForeColor = System.Drawing.Color.White;
+            this.btnExport.Location = new System.Drawing.Point(65, 49);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(254, 34);
+            this.btnExport.TabIndex = 3;
+            this.btnExport.Text = "Export Excel";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // textBoxCariData
             // 
@@ -295,18 +308,6 @@
             this.DataTransaksi.TabIndex = 0;
             this.DataTransaksi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataTransaksi_CellClick_1);
             this.DataTransaksi.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataTransaksi_CellFormatting);
-            // 
-            // btnExport
-            // 
-            this.btnExport.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Location = new System.Drawing.Point(65, 49);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(254, 34);
-            this.btnExport.TabIndex = 3;
-            this.btnExport.Text = "Export Excel";
-            this.btnExport.UseVisualStyleBackColor = false;
             // 
             // FormTransaksi
             // 

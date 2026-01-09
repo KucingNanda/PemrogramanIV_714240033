@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using P9_714240033.controller;
 using P9_714240033.model;
+using P9_714240033.lib;
+using System.IO;
 using MySql.Data.MySqlClient;
 using System.Globalization;
 
@@ -163,6 +165,41 @@ namespace P9_714240033.view
             DataTransaksi.DataSource = transaksi.CariData(textBoxCariData.Text);
 
             DataTransaksi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Excel Documents (*.xlsx)|*.xlsx";
+            save.FileName = "Report Transaksi.xlsx";
+            save.OverwritePrompt = false;
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = save.FileName;
+                if (File.Exists(filePath))
+                {
+                    try
+                    {
+                        File.Delete(filePath);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("File sedang dibuka. Tutup file Excel terlebih dahulu!", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
+                Excel excel_lib = new Excel();
+                excel_lib.ExportToExcel(DataTransaksi, filePath);
+
+                MessageBox.Show(
+                    "Data Transaksi berhasil diekspor ke Excel.",
+                    "Informasi",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+            }
         }
     }
 }
