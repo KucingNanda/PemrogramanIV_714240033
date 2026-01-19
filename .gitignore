@@ -8,6 +8,7 @@ node_modules
 .psci
 # output
 
+packages/
 .vs/
 bin/
 obj/
